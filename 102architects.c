@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <math.h>
 
 int main (int argc, char **argv)
@@ -93,7 +93,25 @@ int main (int argc, char **argv)
               seconde_line[2] = sin(2 * angle) * save_first[2] - cos(2 * angle) * save_seconde[2];
               b += 1;
             }
-    }
+          }
+          if (abs(first_line[0]) < 0.1) {
+              first_line[0] = 0.00;
+          }
+          if(abs(first_line[1]) < 0.1) {
+              first_line[1] = 0.00;
+          }
+          if(abs(first_line[2]) < 0.1) {
+              first_line[2] = 0.00;
+          }
+          if (abs(seconde_line[0]) < 0.1) {
+              seconde_line[0] = 0.00;
+          }
+          if(abs(seconde_line[1]) < 0.1) {
+              seconde_line[1] = 0.00;
+          }
+          if(abs(first_line[2]) < 0.1) {
+              seconde_line[2] = 0.00;
+          }
     printf("%0.2f %0.2f %0.2f\n", first_line[0], first_line[1], first_line[2]);
     printf("%0.2f %0.2f %0.2f\n", seconde_line[0], seconde_line[1], seconde_line[2]);
     printf("%0.2f %0.2f %0.2f\n", last_line[0], last_line[1], last_line[2]);

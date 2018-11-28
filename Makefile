@@ -17,11 +17,11 @@ SRC 	= 102architects.c
 
 all:	compil
 
-compil:	$(SRC)
-	$(CC) -o $(NAME) -lm $(SRC) $(CFLAGS)
+compil:	$(SRC:.c=.o)
+	$(CC) -o $(NAME) -lm 102architects.o $(CFLAGS)
 
 clean:
-	$(RM) $(NAME)
+	$(RM) 102architects.o
 
 fclean:	clean
 	$(RM) $(NAME)

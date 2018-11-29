@@ -114,22 +114,22 @@ int main (int argc, char **argv)
               b += 1;
             }
           }
-          if (abs(first_line[0]) < 0.1) {
+          if (first_line[0] > -0.01 && first_line[0] < -0.00 || first_line[0] == -0.00) {
               first_line[0] = 0.00;
           }
-          if(abs(first_line[1]) < 0.1) {
+          if(first_line[1] > -0.01 && first_line[0] < -0.00 || first_line[1] == -0.00) {
               first_line[1] = 0.00;
           }
-          if(abs(first_line[2]) < 0.1) {
+          if(first_line[2] > -0.01 && first_line[0] < -0.00 || first_line[2] == -0.00) {
               first_line[2] = 0.00;
           }
-          if (abs(seconde_line[0]) < 0.1) {
+          if(seconde_line[0] > -0.01 && seconde_line[0] < -0.00 || seconde_line[0] == -0.00) {
               seconde_line[0] = 0.00;
           }
-          if(abs(seconde_line[1]) < 0.1) {
+          if(seconde_line[1] > -0.01 && seconde_line[0] < -0.00 || seconde_line[1] == -0.00) {
               seconde_line[1] = 0.00;
           }
-          if(abs(seconde_line[2]) < 0.1) {
+          if(seconde_line[2] > -0.01 && seconde_line[0] < -0.00 || seconde_line[2] == -0.00){
               seconde_line[2] = 0.00;
           }
     printf("%0.2f %0.2f %0.2f\n", first_line[0], first_line[1], first_line[2]);

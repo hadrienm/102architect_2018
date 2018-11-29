@@ -20,6 +20,11 @@ int main (int argc, char **argv)
 
     for (int b = 2; b != argc; b++) {
             if (argv[b][a] == '-' && argv[b][a + 1] == 't') {
+                if (argv[b + 3] != NULL) {
+                    if (argv[b + 3][0] != '-') {
+                      return (84);
+                  }
+                }
                 printf("Translation along vector (%0.0f, %0.0f)\n", atof(argv[b + 1]), atof(argv[b + 2]));
                 a = 0;
                 x = x  + atof(argv[b + 1]);
@@ -29,7 +34,12 @@ int main (int argc, char **argv)
                 b += 2;
             }
             if (argv[b][a] == '-' && argv[b][a + 1] == 'z') {
-                printf("Scaling by factors %0.0f and %0.0f \n", atof(argv[b + 1]), atof(argv[b + 2]));
+                if (argv[b + 3] != NULL) {
+                    if (argv[b + 3][0] != '-') {
+                        return (84);
+                    }
+                }
+                printf("Scaling by factors %0.0f and %0.0f\n", atof(argv[b + 1]), atof(argv[b + 2]));
                 a = 0;
                 x = x * atof(argv[b + 1]);
                 y = y * atof(argv[b + 2]);
@@ -42,7 +52,12 @@ int main (int argc, char **argv)
                 b += 2;
             }
             if (argv[b][a] == '-' && argv[b][a + 1] == 'r') {
-                printf("Rotation by a %0.0f degree angles\n", atof(argv[b + 1]));
+                if (argv[b + 2] != NULL) {
+                    if (argv[b + 2][0] != '-') {
+                        return (84);
+                      }
+                }
+                printf("Rotation by a %0.0f degree angle\n", atof(argv[b + 1]));
                 float save_x = x;
                 float angle = atof(argv[b + 1]);
 
@@ -68,6 +83,11 @@ int main (int argc, char **argv)
                 b += 1;
 
             } if (argv[b][a] == '-' && argv[b][a + 1] == 's') {
+              if (argv[b + 2] != NULL) {
+                  if (argv[b + 2][0] != '-') {
+                      return (84);
+                    }
+              }
               printf("Reflection over an axis with an inclination angle of %0.0f degrees\n", atof(argv[b + 1]));
               float angle = atof(argv[b + 1]);
               float save_x = x;

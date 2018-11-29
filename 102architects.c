@@ -109,7 +109,7 @@ int main (int argc, char **argv)
           if(abs(seconde_line[1]) < 0.1) {
               seconde_line[1] = 0.00;
           }
-          if(abs(first_line[2]) < 0.1) {
+          if(abs(seconde_line[2]) < 0.1) {
               seconde_line[2] = 0.00;
           }
     printf("%0.2f %0.2f %0.2f\n", first_line[0], first_line[1], first_line[2]);
